@@ -1,6 +1,6 @@
 # jQuery Templates
 
-A direct rip-off of Underscore templates.  I copied everything, including the unit tests.  See the (Underscore documentation)[http://documentcloud.github.com/underscore/#template] for more information.
+A direct rip-off of Underscore templates.  I copied everything, including the unit tests.  See the [Underscore documentation](http://documentcloud.github.com/underscore/#template) for more information.
 
 ## Example
 
