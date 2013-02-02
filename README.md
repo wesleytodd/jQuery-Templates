@@ -20,6 +20,7 @@ template({value : '<script>'});
 var compiled = $.template("<% print('Hello ' + epithet); %>");
 compiled({epithet: "stooge"});
 => "Hello stooge."
+```
 
 ## Why?
 
