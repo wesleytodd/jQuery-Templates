@@ -1,9 +1,12 @@
 /**
  * jQuery Templates
  *
+ * A rip-off of Underscore templates
+ *
  * Version : 0.0.1
  *
- * http://wesleytodd.com
+ * http://underscorejs.org/
+ * http://wesleytodd.com/
  */
 (function($) {
 
@@ -20,7 +23,7 @@
 
 	var entityRegex = new RegExp('[' + entities + ']', 'g');
 	var _escape = function(string) {
-		if (string == null) return '';
+		if (string === null) return '';
 		return ('' + string).replace(entityRegex, function(match) {
 			return entityMap[match];
 		});

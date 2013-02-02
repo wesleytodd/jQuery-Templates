@@ -16,7 +16,7 @@
   "devDependencies": {
     "grunt": "~0.3.17",
     "mocha": "~1.8.1",
-    "grunt-mocha": "~0.2.1",
+    "grunt-mocha": "~0.1.7",
     "expect.js": "~0.2.0",
     "node-static": "~0.6.7"
   }

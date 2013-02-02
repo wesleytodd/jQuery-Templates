@@ -1,9 +1,28 @@
 module.exports = function(grunt){
 	grunt.initConfig({
-		watch : {
-			files : ['.']
+		pkg: '<json:package.json>',
+		meta : {
+			banner : '/* <%= pkg.name %> | Version: <%= pkg.version %> | Author: <%= pkg.author %> */'
 		},
-		server : {
+		watch : {
+			files : '<config:lint.all>',
+			tasks : 'mocha lint min'
+		},
+		min : {
+			dist : {
+				src : ['<banner>', '<config:lint.all>'],
+				dest : 'src/jquery.templates.min.js'
+			}
+		},
+		lint : {
+			all : ['src/jquery.templates.js']
+		},
+		jshint : {
+			options : {
+				evil : true
+			}
+		},
+		serve : {
 			port : 8000,
 			root : '.'
 		},
@@ -21,7 +40,7 @@ module.exports = function(grunt){
 
 	grunt.registerTask('start-server', 'Start a server', function(){
 
-		var server = grunt.config.get('server');
+		var server = grunt.config.get('serve');
 
 		grunt.log.writeln('Starting server on port ' + server.port)
 
@@ -36,5 +55,5 @@ module.exports = function(grunt){
 
 	});
 
-	grunt.registerTask('server', 'start-server watch');
+	grunt.registerTask('default', 'start-server watch');
 };
