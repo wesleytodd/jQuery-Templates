@@ -31,6 +31,6 @@ I have often wanted to use some nice templates in my jQuery code.  The "official
 Run:
 
 	npm install
-	grunt server
+	grunt
 
-Then go to `http://localhost:8000/test`.
+This runs the test, lints the file minifies the source ans starts a test server at `http://localhost:8000/test`.
