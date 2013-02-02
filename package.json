@@ -1,0 +1,23 @@
+{
+  "name": "jQuery-Templates",
+  "version": "0.0.1",
+  "description": "A jQuery implementation of Underscore templates",
+  "main": "src/jquery.templates.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "jQuery",
+    "templates"
+  ],
+  "author": "Wes Todd",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.3.17",
+    "mocha": "~1.8.1",
+    "grunt-mocha": "~0.2.1",
+    "expect.js": "~0.2.0",
+    "node-static": "~0.6.7"
+  }
+}

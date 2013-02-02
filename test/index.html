@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Templates</title>
+		<link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+		<script src="../node_modules/expect.js/expect.js"></script>
+		<script src="../node_modules/mocha/mocha.js"></script>
+		<script>
+			mocha.setup({
+				ui : 'bdd',
+				globals : []
+			});
+		</script>
+	</head>
+	<body>
+		<div id="mocha"></div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script>
+		<script src="../src/jquery.templates.js" ></script>
+		<script src="tests.js" ></script>
+		<script>
+			if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+				$(document).ready(function(){
+					mocha.run();
+				});
+			}
+		</script>
+		<script type="text/html" id="template">
+			<%
+			// a comment
+			if (data) { data += 12345; }; %>
+			<li><%= data %></li>
+		</script>
+	</body>
+</html>
