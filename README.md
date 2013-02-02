@@ -33,4 +33,4 @@ Run:
 	npm install
 	grunt
 
-This runs the test, lints the file minifies the source ans starts a test server at `http://localhost:8000/test`.
+This runs the tests, lints and minifies the source and starts a test server at `http://localhost:8000/test`.
